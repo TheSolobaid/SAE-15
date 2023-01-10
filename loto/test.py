@@ -1,5 +1,5 @@
 import numpy as np
-qqch = [0,1]
+binary = [0,1]
 from numpy.random import choice
 nbr = np.arange(1, 46)
 
@@ -20,10 +20,10 @@ def testnbr(n):
         return False
 
 
-def testseed(n):
+def testchoice(n):
     try:
         int(n)
-        if int(n) in qqch:
+        if int(n) in binary:
             return True
         else:
             return False
@@ -31,7 +31,7 @@ def testseed(n):
         return False
 
 
-def testnbseed(n):
+def testseed(n):
     try:
         int(n)
         if int(n) > 0:
