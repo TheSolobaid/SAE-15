@@ -7,7 +7,6 @@ test = 'a'
 seed = 'a'
 choice = 'a'
 while True:
-    tirageTotal = []
     while not testnbr(nbr):
         nbr = input("combien de tirage voulez vous faire ?  ")
         testnbr(nbr)
@@ -29,12 +28,9 @@ while True:
     np.random.seed(int(seed))
     for i in range(int(nbr)):
         print(tirage())
-        tirageTotal.append(tirage())
-    print(tirageTotal)
     nbr = 'a'
     test = 'a'
     seed = 'a'
-    print(tirageTotal)
     while not testseed(choice):
         choice = input("voulez-vous trier ? (oui = 1 / non = 0) ? ")
         testseed(choice)
