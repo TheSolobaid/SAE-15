@@ -1,5 +1,6 @@
 from test import testnbr, testchoice, tirage , testseed
 import numpy as np
+import pandas as pd
 from tri import TriCocktail
 
 nbr , test , seed , choice= 'a' , 'a' , 'a' , 'a'
@@ -24,6 +25,5 @@ while True:
             seed = np.random.randint(1000)                                                          #si pas de seed donnée en génère une et la print
             print(f"la seed utilisée est {seed} \n")
     np.random.seed(int(seed))
-    for i in range(int(nbr)):
-        print(tirage())
+    print(tirage(int(nbr)))
     nbr , test , seed = 'a' , 'a' , 'a' 
