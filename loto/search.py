@@ -6,12 +6,12 @@ def rechercheDichotomiqueIteratif(list, n):  #itératif
         milieu = (début+fin)//2
         if list[milieu] == n:
             trouvé=True
-        elif list[milieu]<x:
+        elif list[milieu]<n:
             début = milieu+1
         else:
             fin = milieu-1
     if trouvé:
-        return(milieu)
+        return f"{n} esiste dans la liste a la positon {milieu}"
     else:
         return f"{n} n'existe pas dans la list"
 
@@ -21,7 +21,7 @@ def rechercheDichotomiqueRecursive(list, n, gauche, droite): #récurcif
         return f"{n} n'existe pas dans la list"
     milieu = (gauche + droite) // 2
     if list[milieu] == n:
-        return milieu
+        return f"{n} esiste dans la liste a la positon {milieu}"
     elif list[milieu] > n:
         return rechercheDichotomiqueRecursive(list, n, gauche, milieu-1)
     else:
