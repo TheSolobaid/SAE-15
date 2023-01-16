@@ -1,9 +1,10 @@
 from test import testnbr, testchoice, tirage , testseed
 import numpy as np
 import pandas as pd
-from tri import TriCocktail
+from tri import TriCocktail , triFusion , triInsertion
+from export import exportCSV
 
-nbr , test , seed , choice= 'a' , 'a' , 'a' , 'a'
+nbr , test , seed ,save, choice= 'a' , 'a' , 'a' , 'a', 'a'
 
 while True:
     while not testnbr(nbr):                                                                         #test si bien nbr appartiens a N (nombre entier positif)
@@ -26,4 +27,13 @@ while True:
             print(f"la seed utilisée est {seed} \n")
     np.random.seed(int(seed))
     print(tirage(int(nbr)))
-    nbr , test , seed = 'a' , 'a' , 'a' 
+    test , seed = 'a' , 'a' 
+    while not testchoice(save):
+        save = input("voulez vous sauvegarder votre fichier ? (oui = 1 / non = 0)? ")
+        testchoice(save)
+        if not testchoice(save):
+            print("ceci n'est pas une valeur acceptable (0/1)\n")
+    if int(save) == 1:
+        name = input('nom de la sauvegarde (.csv): ')
+        exportCSV(tirage(int(nbr)), name)
+    

@@ -3,7 +3,7 @@ binary = [0,1]
 from numpy.random import choice
 import pandas as pd
 nbr = np.arange(1, 46)
-
+import os.path
 
 def tirage(j):
     tirTotal = []
@@ -44,4 +44,9 @@ def testseed(n):
         else:
             return False
     except:
+        return False
+
+
+def testname(n):
+    if os.path.isfile(n):
         return False
