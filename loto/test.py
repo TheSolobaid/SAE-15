@@ -1,9 +1,10 @@
 import numpy as np
-binary = [0,1]
 from numpy.random import choice
 import pandas as pd
-nbr = np.arange(1, 46)
 import os.path
+binary = [0,1]
+save = [1,2,3]
+moyen = [1,2]
 
 def tirage(j):
     tirTotal = []
@@ -47,6 +48,53 @@ def testseed(n):
         return False
 
 
-def testname(n):
-    if os.path.isfile(n):
+def testname(name , format):
+    path = os.path.join(__file__.replace("test.py",""), "output")
+    if format == 1:
+        if not name.endswith(".csv"):
+            name = name+'.csv'
+    elif format == 2:
+        if not name.endswith(".json"):
+            name = name+'.json'
+    else:
+        if not name.endswith(".pkl"):
+            name = name+'.pkl'
+    path = os.path.join(path, name)
+    if os.path.isfile(path):
+        return False
+
+
+def testsave(n):
+    try:
+        int(n)
+        if int(n) in save:
+            return True
+        else:
+            return False
+    except:
+        return False
+
+
+def testmoyen(n):
+    try:
+        int(n)
+        if int(n) in moyen:
+            return True
+        else:
+            return False
+    except:
+        return False
+
+
+def testrecherche(n):
+    temp =[]
+    for i in range (1, 46):
+        temp.append(i)
+    try:
+        int(n)
+        if int(n) in temp:
+            return True
+        else:
+            return False
+    except:
         return False

@@ -18,7 +18,7 @@ def TriCocktail(list): #itératif
                 list[i+1] = temp
                 test = 1
         debut += 1
-
+    return list
 
 def triInsertion(list):
     swap=True
@@ -29,8 +29,7 @@ def triInsertion(list):
                 if list[j]>list[i]:
                     list[j], list[i] = list[i], list[j]
                     swap = True
-            print(list)
-
+    return list
 
 def triFusion(list): 
     if len(list)>1:
@@ -55,4 +54,5 @@ def triFusion(list):
         while j < len(r):                   # [] [...]
             list[k] = r[j]
             j += 1
-            k += 1
+            k += 1  
+    return list
