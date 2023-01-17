@@ -4,7 +4,6 @@ import pandas as pd
 from tri import TriCocktail , triFusion , triInsertion
 from export import exportCSV
 
-nbr , test , seed ,save, choice= 'a' , 'a' , 'a' , 'a', 'a'
 
 while True:
     while not testnbr(nbr):                                                                         #test si bien nbr appartiens a N (nombre entier positif)
