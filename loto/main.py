@@ -9,7 +9,8 @@ from histogram import histogram
 
 
 while True:
-    nbr,test,seed,save,choice,format,sorting,way,recher,moyen,recherche='a','a','a','a','a','a','a','a','a','a','a'            #déclaration de valeur fausse pour pouvoir rentrer dans les boucles de test
+    nbr,test,seed,save,choice,format,sorting,way,recher,moyen,recherche='a','a','a','a','a','a','a','a','a','a','a'           #déclaration de valeur fausse pour pouvoir rentrer dans les boucles de test
+    iteration = 0
     chargedata = False
     sorted = False
 
@@ -40,6 +41,7 @@ while True:
         format = 'a'
         print(tir)
     
+
     if not chargedata:
             #génération de donnée si besoin
         while not testnbr(nbr):                                                                         #test si bien nbr appartiens a N (nombre entier positif)
@@ -99,6 +101,7 @@ while True:
             tir =  pd.DataFrame(tritotal, columns=['1st nbr','2nd nbr','3rd nbr','4th nbr','5th nbr'])
             sorted = True
         print(tir)
+
 
         #sauvegarde de donnée
     while not testchoice(save):
@@ -162,10 +165,20 @@ while True:
                     templist=tir.iloc[i].values.tolist()
                     if rechercheDichotomiqueIteratif(templist, recherche):
                         print(f"le nombre {recherche} est dans le {i+1}e tirage à la {rechercheDichotomiqueIteratif(templist, recherche)+1}e place\n")
+                        iteration +=1 
+                if iteration == 0:
+                    print(f"{recherche} n'est pas présent dans la liste")
+                else:
+                    print(f"{recherche} est {iteration} fois dans le(s) {len(tir)+1} tirage(s)")
             if int(moyen) == 2:
-                for i in range(len(tir)):
+                for i in range(5):
                     templist=tir.iloc[i].values.tolist()
                     if rechercheDichotomiqueRecursive(templist, recherche, 0, len(templist)):
+                        iteration += 1
                         print(f"le nombre {recherche} est dans le {i+1}e tirage à la {rechercheDichotomiqueRecursive(templist, recherche, 0, len(templist))+1}e place\n")
+                if iteration == 0:
+                    print(f"{recherche} n'est pas présent dans la liste")
+                else:
+                    print(f"{recherche} est {iteration} fois dans le(s) {len(tir)+1} tirage(s)")
     else:
         print("la recherche ne peut pas être effectuée car la liste n'est pas triée! ")
