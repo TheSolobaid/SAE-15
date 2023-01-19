@@ -16,27 +16,16 @@ def rechercheDichotomiqueIteratif(list, n):  #itératif
         return False
 
 
-"""def rechercheDichotomiqueRecursive(list, n, gauche, droite): #récurcif
+def rechercheDichotomiqueRecursive(liste, n, gauche = 0, droite = -2):
+    if droite == -2:
+            droite = len(liste) - 1
     if gauche > droite:
         return False
-    milieu = (gauche + droite) // 2
-    if list[milieu] == int(n):
-        return milieu
-    elif list[milieu] > int(n):
-        return rechercheDichotomiqueRecursive(list, n, gauche, milieu)
     else:
-        return rechercheDichotomiqueRecursive(list, n, milieu, droite)
-"""
-def rechercheDichotomiqueRecursive( list, n, gauche = 0, droite = -1 ):
-    if gauche == droite: 
-        return False
-    else:
-        if droite == -1 : 
-            droite = len(list)-1
-        m = (gauche+droite)//2
-        if list[m] == int(n) :
-            return m
-        elif list[m] > int(n) :
-            return rechercheDichotomiqueRecursive(list, n, gauche, m-1)
-        else :
-            return rechercheDichotomiqueRecursive(list, n, m+1, droite)
+        milieu = (gauche + droite) // 2
+        if liste[milieu] == int(n):
+            return milieu
+        elif liste[milieu] > int(n):
+            return rechercheDichotomiqueRecursive(liste, n, gauche, milieu - 1)
+        else:
+            return rechercheDichotomiqueRecursive(liste, n, milieu + 1, droite)
