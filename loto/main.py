@@ -85,7 +85,6 @@ while True:
                     templist=tir.iloc[i].values.tolist()
                     templist = TriCocktail(templist)
                     tir.iloc[i]=templist
-                tir =  pd.DataFrame(tritotal, columns=['1st nbr','2nd nbr','3rd nbr','4th nbr','5th nbr'])
                 sorted = True
             if int(way) == 2:                                                                                                                        #tri fusion
                 tritotal = []
@@ -93,7 +92,6 @@ while True:
                     templist=tir.iloc[i].values.tolist()
                     templist = triFusion(templist)
                     tir.iloc[i]=templist
-                tir =  pd.DataFrame(tritotal, columns=['1st nbr','2nd nbr','3rd nbr','4th nbr','5th nbr'])
                 sorted = True
             if int(way) == 3:                                                                                                                        #tri insertion
                 tritotal = []
@@ -101,7 +99,6 @@ while True:
                     templist=tir.iloc[i].values.tolist()
                     templist = triInsertion(templist)
                     tir.iloc[i]=templist
-                tir =  pd.DataFrame(tritotal, columns=['1st nbr','2nd nbr','3rd nbr','4th nbr','5th nbr'])
                 sorted = True
             print(tir)
 
