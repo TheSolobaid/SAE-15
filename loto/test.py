@@ -49,20 +49,24 @@ def testseed(n):
 
 
 def testname(name , format):
-    path = os.path.join(__file__.replace("test.py",""), "output")
-    if format == 1:
-        if not name.endswith(".csv"):
-            name = name+'.csv'
-    elif format == 2:
-        if not name.endswith(".json"):
-            name = name+'.json'
+    réussi = True
+    if name != 'none':
+        path = os.path.join(__file__.replace("test.py",""), "output")
+        if int(format) == 1:
+            if not name.endswith(".csv"):
+                name = name+'.csv'
+        if int(format) == 2:
+            if not name.endswith(".json"):
+                name = name+'.json'
+        if int(format) == 3:
+            if not name.endswith(".pkl"):
+                name = name+'.pkl'
+        path = os.path.join(path, name)
+        if os.path.isfile(path):
+            réussi = False
     else:
-        if not name.endswith(".pkl"):
-            name = name+'.pkl'
-    path = os.path.join(path, name)
-    if os.path.isfile(path):
-        return False
-
+        réussi = False
+    return réussi
 
 def testsave(n):
     try:
@@ -98,3 +102,16 @@ def testrecherche(n):
             return False
     except:
         return False
+
+
+def testsorted(name):
+    sorted = False
+    if name.endswith(".csv"):
+        name = name.replace(".csv","")
+    if name.endswith("pkl"):
+        name = name.replace("pkl","")
+    if name.endswith(".json"):
+        name = name.replace(".json","")
+    if name.endswith('_sorted'):
+        sorted = True
+    return sorted
