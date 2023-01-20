@@ -106,12 +106,6 @@ def testrecherche(n):
 
 def testsorted(name):
     sorted = False
-    if name.endswith(".csv"):
-        name = name.replace(".csv","")
-    if name.endswith("pkl"):
-        name = name.replace("pkl","")
-    if name.endswith(".json"):
-        name = name.replace(".json","")
-    if name.endswith('_sorted'):
+    if ('_sorted') in name:
         sorted = True
     return sorted

@@ -4,8 +4,12 @@ import os.path
 
 def exportCSV(dfPanda, name, sorted):
     if sorted:
+        if name.endswith(".csv"):
+            name = name.replace(".cvs","")
         name = name+'_sorted'
     else:
+        if name.endswith(".csv"):
+            name = name.replace(".cvs","")
         name = name+'_unsorted'
     if not name.endswith(".csv"):
         name = name+ '.csv'
@@ -17,8 +21,12 @@ def exportCSV(dfPanda, name, sorted):
 
 def exportJSON(dfPanda, name,sorted):
     if sorted:
+        if name.endswith(".json"):
+            name = name.replace(".json","")
         name = name+'_sorted'
     else:
+        if name.endswith(".json"):
+            name = name.replace(".json","")
         name = name+'_unsorted'
     if not name.endswith(".json"):
         name = name+ '.json'
@@ -30,8 +38,12 @@ def exportJSON(dfPanda, name,sorted):
 
 def exportPICKLE(dfPanda, name,sorted):
     if sorted:
+        if name.endswith(".pl"):
+            name = name.replace(".pkl","")
         name = name+'_sorted'
     else:
+        if name.endswith(".pkl"):
+            name = name.replace(".pkl","")
         name = name+'_unsorted'
     if not name.endswith(".pkl"):
         name = name+ '.pkl'
