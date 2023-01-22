@@ -131,10 +131,10 @@ if int(save) == 1:
 
     #choix pour histogramme
 while not testchoice(choice):
-        choice = int(input("\n--------------------------------------\n\nvoulez vous tracer un histogram? (oui = 1 / non = 0)? "))
+        choice = input("\n--------------------------------------\n\nvoulez vous tracer un histogram? (oui = 1 / non = 0)? ")
         if not testchoice(choice):
             print("ceci n'est pas une valeur acceptable (0/1)\n")
-if choice == 1 :
+if int(choice) == 1 :
     histogramme(tir)
 
 
@@ -143,8 +143,9 @@ while not testchoice(recher):
         recher = input("\n--------------------------------------\n\nvoulez vous rechercher un nombre précis? (oui = 1 / non = 0)? ")
         if not testchoice(recher):
             print("ceci n'est pas une valeur acceptable (0/1)\n")
-if sorted:
-    if recher == 1 :
+
+if int(recher) == 1 :
+    if sorted:
         while not testrecherche(recherche):
             recherche = input("quelle est la valeure a rechercher? (entre 1 et 45)? ")
             if not testrecherche(recherche):
@@ -173,5 +174,5 @@ if sorted:
             if iteration == 0:
                 print(f"{recherche} n'est pas présent dans la liste")
             print(f"{recherche} est {iteration} fois dans le(s) {len(tir)} tirage(s)")
-else:
-    print("la recherche ne peut pas être effectuée car la liste n'est pas triée! ")
+    else:
+        print("la recherche ne peut pas être effectuée car la liste n'est pas triée! ")

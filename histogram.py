@@ -3,12 +3,12 @@ import numpy as np
 
 def histogramme(df):
     histo = {} 
-    for col in df.columns: 
-        for val in df[col]: 
-            if val in histo:
-                histo[val] += 1 
+    for colonne in df.columns: 
+        for valeur in df[colonne]: 
+            if valeur in histo:
+                histo[valeur] += 1 
             else:
-                histo[val] = 1 
+                histo[valeur] = 1 
     plt.bar(histo.keys(), histo.values()) 
     plt.xticks(np.arange(1,46))
     plt.xlabel('Nombre')

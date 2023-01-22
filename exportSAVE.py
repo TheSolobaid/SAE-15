@@ -1,5 +1,3 @@
-import pandas as pd
-from test import testname 
 import os.path
 
 def exportCSV(dfPanda, name, sorted):
