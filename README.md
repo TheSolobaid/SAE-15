@@ -1,7 +1,7 @@
 # SAE-15
 SAE 15 le projet loto
 
-## **Run '''main.py''' to start the code**
+## **Run ``main.py`` to start the code**
 
 
 ### **To import your data in to python, just put the .csv/.json/.pkl file in to the ***"YOUR_DATA"*** directory**
