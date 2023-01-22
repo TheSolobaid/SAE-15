@@ -3,13 +3,13 @@ SAE 15 le projet loto
 
 Run main.py to start the code
 
----------------------------------------------------------------------------------------------------
+
 To import your data in to python, just put the .csv/.json/.pkl file in to the "YOUR_DATA" directory
 
 In it you will also find your data after you saved it
----------------------------------------------------------------------------------------------------
 
-In search.py you will find both the iterative and recursive versions of Binary Search
+
+In __search.py__ you will find both the iterative and recursive versions of Binary Search
 
 In test.py you will find all the test for the inputs and the "tirage" function
 
