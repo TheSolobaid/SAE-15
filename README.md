@@ -16,4 +16,4 @@ In ```importSAVE.py``` you will find the code to import data you generated earli
 
 In ```histogram.py``` you will find the code to show a bar graph with all the data you generated
 
-### By ***TheSolobaid*** https://github.com/TheSolobaid/
+## By ***TheSolobaid*** https://github.com/TheSolobaid/
