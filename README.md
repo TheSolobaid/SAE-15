@@ -1,12 +1,11 @@
 # SAE-15
 SAE 15 le projet loto
 
-## **Run _main.py_ to start the code**
+## **Run '''main.py''' to start the code**
 
 
-## **To import your data in to python, just put the -.csv/.json/.pkl- file in to the ***"YOUR_DATA"*** directory**
-
-## **In it you will also find your data -after- you saved it**
+### **To import your data in to python, just put the .csv/.json/.pkl file in to the ***"YOUR_DATA"*** directory**
+### **In it you will also find your data after you saved it**
 
 
 In _search.py_ you will find both the iterative and recursive versions of Binary Search
