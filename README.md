@@ -19,3 +19,5 @@ In ```exportSAVE.py``` you will find the code to export all the data you generat
 In ```importSAVE.py``` you will find the code to import data you generated earlier
 
 In ```histogram.py``` you will find the code to show a bar graph with all the data you generated
+
+By ***TheSolobaid*** https://github.com/TheSolobaid/
